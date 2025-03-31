@@ -1,111 +1,67 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
-    width: 100vw;
-    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    color: black;
+    padding: 1rem;
+}
+
+.container {
+    border-radius: .5rem;
+    box-shadow: 0 .25rem .3rem rgba(0, 0, 0, .1);
+    max-width: 25rem;
+    margin: .25rem auto;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+form {
     display: flex;
-    flex-direction: column;
-    background-color: #76d2f3;
-    gap: 15px;
+    gap: .5rem;
 }
 
-.searchBarContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5%;
-    background-color: #e6e6e6;
-    gap: 0.5rem;
-}
-
-#searchBar {
-    border: 0;
-    line-height: 1.5rem;
-    width: 25vw;
-    font-size: 1rem;
-}
-
-#searchBar:hover {
-    outline: 2px solid #7a7a7a;
-}
-
-#searchBar:focus {
-    outline: 2px solid #0078d7;
+input {
+    flex: 1;
+    border: .1rem solid #ddd;
+    border-radius: .25rem;
+    padding: .5rem;
 }
 
 button {
-    background-color: #cccccc;
-    border: 0;
-    line-height: 1.5rem;
-    font-size: 1rem;
+    border: none;
+    border-radius: .25rem;
+    padding: 1rem 1.25rem;
+    background: #007bff;
+    color: white;
     cursor: pointer;
 }
 
 button:hover {
-    outline: 2px solid #7a7a7a;
+    background: #0056b3;
 }
 
-button:active {
-    background-color: #7a7a7a;
+#weatherResults {
+    margin-top: 1.25rem;
+    text-align: left;
 }
 
-.mainGrid {
-    height: 95vh;
-    width: 50vw;
-    align-self: center;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.mainGrid div,
-img {
-    background-color: #0078d7;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+#weatherResults h2 {
     text-align: center;
-    padding: 10px;
 }
 
-.clock {
-    grid-column: span 2;
-    font-size: 32px;
+.results {
+    margin: auto;
+    width: 50%;
 }
 
-.date {
-    grid-row: span 1;
-}
-
-.temperature {
-    grid-row: span 1;
-    font-size: 28px;
-}
-
-.city {
-    grid-column: span 1;
-    font-size: 16px;
-}
-
-.forecast {
-    grid-row: span 3;
-    grid-column: span 1;
+.weatherResult {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 1rem;
+    text-wrap: nowrap;
 }
-
-.image {
-    grid-column: span 2;
-    /*background: url('test.png') center/cover; */
-
-    align-self: stretch;
-    justify-self: stretch;
-}
-
-
-/* MEDIA QUERIES */
-@media (max-width: 500px) {}
