@@ -19,10 +19,14 @@ body {
 }
 
 #searchBar {
-    outline: 1px solid #8a8a8a;
+    border: 0;
     line-height: 1.5rem;
     width: 25vw;
     font-size: 1rem;
+}
+
+#searchBar:hover {
+    outline: 2px solid #7a7a7a;
 }
 
 #searchBar:focus {
@@ -30,18 +34,19 @@ body {
 }
 
 button {
-    outline: 1px solid #8a8a8a;
+    background-color: #cccccc;
+    border: 0;
     line-height: 1.5rem;
     font-size: 1rem;
     cursor: pointer;
 }
 
-button:active {
-    background-color: #c2c2c2;
+button:hover {
+    outline: 2px solid #7a7a7a;
 }
 
 button:active {
-    outline: 1px solid #0078d7;
+    background-color: #7a7a7a;
 }
 
 .mainGrid {
