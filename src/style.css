@@ -13,6 +13,7 @@ body {
     max-width: 25rem;
     margin: .25rem auto;
     padding: 1rem;
+    background-color: #f0f4f9;
 }
 
 h1 {
@@ -27,21 +28,27 @@ form {
 
 input {
     flex: 1;
-    border: .1rem solid #ddd;
+    border: .2rem solid #ddd;
     border-radius: .25rem;
     padding: .5rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: #0078d7;
 }
 
 button {
     border: none;
     border-radius: .25rem;
     padding: 1rem 1.25rem;
-    background: #007bff;
+    background: #0078d7;
     color: white;
     cursor: pointer;
 }
 
-button:hover {
+button:active {
+    transform: scale(0.98);
     background: #0056b3;
 }
 

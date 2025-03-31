@@ -18,7 +18,7 @@ form.addEventListener('submit', async (e) => {
   }
   try {
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=${API_KEY}`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${API_KEY}`,
     );
 
     if (!response.ok) {
@@ -26,6 +26,32 @@ form.addEventListener('submit', async (e) => {
     }
 
     const responseJSON = await response.json();
+    weatherResult.innerHTML = `
+    <h2>${responseJSON.resolvedAddress}</h2>
+    <div class="results">
+      <div class="weatherResult">
+        <i class="fa-solid fa-temperature-full"></i>
+        <p><b>Temperature:</b> ${responseJSON.currentConditions.temp}°F</p>
+      </div>
+      <div class="weatherResult">
+        <i class="fa-solid fa-umbrella"></i>
+        <p><b>Conditions:</b> ${responseJSON.currentConditions.conditions}</p>
+      </div>
+      <div class="weatherResult">
+        <i class="fa-solid fa-cloud-showers-heavy"></i>
+        <p><b>Precipitation:</b> ${responseJSON.currentConditions.precip}%</p>
+      </div>
+      <div class="weatherResult">
+        <i class="fa-solid fa-droplet"></i>
+        <p><b>Humidity:</b> ${responseJSON.currentConditions.humidity}%</p>
+      </div>
+      <div class="weatherResult">
+        <i class="fa-solid fa-wind"></i>
+        <p><b>Wind:</b> ${responseJSON.currentConditions.windspeed} m/s</p>
+      </div>
+
+    </div>
+    `;
     console.log(responseJSON);
   } catch (error) {
     console.error(error);
