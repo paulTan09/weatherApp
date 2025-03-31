@@ -5,16 +5,16 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #76d2f3;
+    gap: 15px;
 }
 
 .searchBarContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: 1px solid red;
     height: 5%;
     background-color: #e6e6e6;
-
 }
 
 #searchBar {
@@ -30,17 +30,16 @@ body {
 
 .mainGrid {
     height: 95vh;
-    width: 80vw;
-    outline: 1px solid green;
+    width: 50vw;
     align-self: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-
 }
 
-.mainGrid div {
+.mainGrid div,
+img {
     background-color: #0078d7;
     color: white;
     display: flex;
@@ -81,7 +80,12 @@ body {
 
 .image {
     grid-column: span 2;
-    background: url('test.png') center/cover;
+    /*background: url('test.png') center/cover; */
+
     align-self: stretch;
     justify-self: stretch;
 }
+
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {}
