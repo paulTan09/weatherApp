@@ -1,8 +1,3 @@
-cmd after cloning:
+Basic meteo site to test APIs.
 
-npm install
-
-npm run start/build
-
-<b>Included code formatter</b>
-    https://github.com/wesbos/eslint-config-wesbos
+It uses Visual Crossing's free weather API plan (up to 1000 queries/day). - https://www.visualcrossing.com
