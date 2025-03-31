@@ -15,17 +15,33 @@ body {
     align-items: center;
     height: 5%;
     background-color: #e6e6e6;
+    gap: 0.5rem;
 }
 
 #searchBar {
     outline: 1px solid #8a8a8a;
-    height: 1.5rem;
+    line-height: 1.5rem;
     width: 25vw;
     font-size: 1rem;
 }
 
 #searchBar:focus {
     outline: 2px solid #0078d7;
+}
+
+button {
+    outline: 1px solid #8a8a8a;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #c2c2c2;
+}
+
+button:active {
+    outline: 1px solid #0078d7;
 }
 
 .mainGrid {
